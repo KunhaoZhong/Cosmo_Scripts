@@ -3,12 +3,12 @@
 #SBATCH --job-name=get_cl
 #SBATCH --output=get_cl-%j.out
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
-#SBATCH --cpus-per-task=5
-#SBATCH --partition=long-24core
+#SBATCH --ntasks-per-node=10
+#SBATCH --cpus-per-task=4
+#SBATCH --partition=long-40core
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=kunhao.zhong@stonybrook.edu
-#SBATCH -t 10:00:00
+#SBATCH -t 15:00:00
 
 # Clear the environment from any previously loaded modules
 module purge > /dev/null 2>&1
@@ -33,4 +33,4 @@ else
   export OMP_NUM_THREADS=1
 fi
 
-mpirun -n ${SLURM_NTASKS} python ./projects/AStress/Cl_band/get_cl_from_chains.py
+time mpirun -n ${SLURM_NTASKS} --bind-to core --map-by numa:pe=${OMP_NUM_THREADS} -mca orte_abort_on_non_zero_status 1 python ./projects/AStress/Cl_band/get_cl_from_chains.py
