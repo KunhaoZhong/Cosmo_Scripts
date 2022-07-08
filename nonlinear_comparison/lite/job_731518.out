@@ -1,0 +1,779 @@
+ERROR START_COCOA_DONE already defined
+running lmax=2500
+ 2022-02-20 21:31:59,426 [output_mpi] Creating output folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result'
+ 2022-02-20 21:31:59,431 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2500_nonlinear'
+ 2022-02-20 21:32:01,048 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:01,102 [classy] Initialized!
+ 2022-02-20 21:32:01,118 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+Checking likelihood '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/data/planck/plc_3.0/hi_l/plik_lite/plik_lite_v22_TT.clik' on test data. got -103.599 expected -103.599 (diff -4.91991e-08)
+----
+ 2022-02-20 21:32:02,723 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:02,724 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:02,724 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:02,724 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:02,724 [model]      Output: []
+ 2022-02-20 21:32:02,724 [model] - classy:
+ 2022-02-20 21:32:02,724 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:02,724 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:02,727 [model] Components will be computed in the order:
+ 2022-02-20 21:32:02,727 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:02,727 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:02,727 [model] - Cl: classy
+ 2022-02-20 21:32:02,753 [evaluate] Initialized!
+ 2022-02-20 21:32:02,774 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:02,775 [prior] Evaluating prior at array([3.05113396e+00, 9.66264874e-01, 6.83205173e+01, 2.23651870e-02,
+       1.20962308e-01, 4.92849002e-02, 9.96976583e-01])
+ 2022-02-20 21:32:02,775 [prior] Got logpriors = [2.6432585428010293]
+ 2022-02-20 21:32:02,776 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:02,776 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:02,776 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:02,776 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:02,776 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:02,777 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:02,777 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:02,777 [classy] Computing new state
+ 2022-02-20 21:32:02,777 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': 'halofit', 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'mPk tCl lCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:07,838 [classy] First evaluation time: 5.06118 s
+ 2022-02-20 21:32:07,838 [classy] Average evaluation time: 5.06118 s
+ 2022-02-20 21:32:07,839 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:07,839 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:07,840 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -104.217
+ 2022-02-20 21:32:07,840 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00123523 s
+ 2022-02-20 21:32:07,840 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00123523 s
+ 2022-02-20 21:32:07,840 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8117603967896749, 's8h5': 0.9893633219513118, 's8omegamp5': 0.4562048665946374, 's8omegamp25': 0.6085466650341973, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 208.43398652830535}
+ 2022-02-20 21:32:07,841 [evaluate] log-posterior  = -100.842
+ 2022-02-20 21:32:07,841 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:07,841 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:07,841 [evaluate] log-likelihood = -104.217
+ 2022-02-20 21:32:07,841 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 208.434
+ 2022-02-20 21:32:07,842 [evaluate] Derived params:
+ 2022-02-20 21:32:07,842 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:07,842 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:07,842 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:07,842 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:07,842 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:07,842 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:07,842 [evaluate]    sigma8 = 0.81176
+ 2022-02-20 21:32:07,842 [evaluate]    s8h5 = 0.989363
+ 2022-02-20 21:32:07,842 [evaluate]    s8omegamp5 = 0.456205
+ 2022-02-20 21:32:07,842 [evaluate]    s8omegamp25 = 0.608547
+ 2022-02-20 21:32:07,842 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:07,842 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:07,842 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:07,842 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:07,842 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:07,842 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:07,842 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:07,842 [evaluate]    chi2__CMB = 208.434
+ 2022-02-20 21:32:07,872 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00123523 s  (1 evaluations)
+ 2022-02-20 21:32:07,872 [classy] Average evaluation time for classy: 5.06118 s  (1 evaluations)
+ 2022-02-20 21:32:11,227 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2500_linear'
+ 2022-02-20 21:32:11,496 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:11,498 [classy] Initialized!
+ 2022-02-20 21:32:11,499 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+Checking likelihood '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/data/planck/plc_3.0/hi_l/plik_lite/plik_lite_v22_TT.clik' on test data. got -103.599 expected -103.599 (diff -4.91991e-08)
+----
+ 2022-02-20 21:32:11,772 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:11,773 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:11,773 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:11,773 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:11,773 [model]      Output: []
+ 2022-02-20 21:32:11,773 [model] - classy:
+ 2022-02-20 21:32:11,773 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:11,773 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:11,774 [model] Components will be computed in the order:
+ 2022-02-20 21:32:11,775 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:11,775 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:11,775 [model] - Cl: classy
+ 2022-02-20 21:32:11,793 [evaluate] Initialized!
+ 2022-02-20 21:32:11,809 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:11,810 [prior] Evaluating prior at array([3.05115793e+00, 9.63783858e-01, 6.95567261e+01, 2.24023658e-02,
+       1.18799072e-01, 3.81545607e-02, 1.00088423e+00])
+ 2022-02-20 21:32:11,810 [prior] Got logpriors = [3.3119942968651364]
+ 2022-02-20 21:32:11,810 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:11,811 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:11,811 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:11,811 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:11,811 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:11,811 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:11,811 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:11,811 [classy] Computing new state
+ 2022-02-20 21:32:11,811 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': None, 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'tCl lCl mPk', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:14,914 [classy] First evaluation time: 3.10254 s
+ 2022-02-20 21:32:14,914 [classy] Average evaluation time: 3.10254 s
+ 2022-02-20 21:32:14,915 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:14,915 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:14,916 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -104.867
+ 2022-02-20 21:32:14,916 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00115905 s
+ 2022-02-20 21:32:14,916 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00115905 s
+ 2022-02-20 21:32:14,916 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8116235154312484, 's8h5': 0.989196492679988, 's8omegamp5': 0.4561279400260253, 's8omegamp25': 0.6084440501560816, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 209.73483321624272}
+ 2022-02-20 21:32:14,917 [evaluate] log-posterior  = -101.493
+ 2022-02-20 21:32:14,917 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:14,917 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:14,917 [evaluate] log-likelihood = -104.867
+ 2022-02-20 21:32:14,917 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 209.735
+ 2022-02-20 21:32:14,917 [evaluate] Derived params:
+ 2022-02-20 21:32:14,917 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:14,917 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:14,917 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:14,918 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:14,918 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:14,918 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:14,918 [evaluate]    sigma8 = 0.811624
+ 2022-02-20 21:32:14,918 [evaluate]    s8h5 = 0.989196
+ 2022-02-20 21:32:14,918 [evaluate]    s8omegamp5 = 0.456128
+ 2022-02-20 21:32:14,918 [evaluate]    s8omegamp25 = 0.608444
+ 2022-02-20 21:32:14,918 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:14,918 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:14,918 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:14,918 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:14,918 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:14,918 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:14,918 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:14,918 [evaluate]    chi2__CMB = 209.735
+ 2022-02-20 21:32:14,929 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00115905 s  (1 evaluations)
+ 2022-02-20 21:32:14,929 [classy] Average evaluation time for classy: 3.10254 s  (1 evaluations)
+running lmax=2400
+ 2022-02-20 21:32:16,137 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2400_nonlinear'
+ 2022-02-20 21:32:16,315 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:16,316 [classy] Initialized!
+ 2022-02-20 21:32:16,317 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:16,671 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:16,671 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:16,671 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:16,671 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:16,672 [model]      Output: []
+ 2022-02-20 21:32:16,672 [model] - classy:
+ 2022-02-20 21:32:16,672 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:16,672 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:16,673 [model] Components will be computed in the order:
+ 2022-02-20 21:32:16,673 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:16,673 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:16,673 [model] - Cl: classy
+ 2022-02-20 21:32:16,692 [evaluate] Initialized!
+ 2022-02-20 21:32:16,708 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:16,709 [prior] Evaluating prior at array([3.05123069e+00, 9.60841870e-01, 6.92339252e+01, 2.23736883e-02,
+       1.20599935e-01, 5.31692349e-02, 1.00062402e+00])
+ 2022-02-20 21:32:16,710 [prior] Got logpriors = [3.3433909603691925]
+ 2022-02-20 21:32:16,710 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:16,710 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:16,710 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:16,710 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:16,710 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:16,711 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:16,711 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:16,711 [classy] Computing new state
+ 2022-02-20 21:32:16,711 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': 'halofit', 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'mPk tCl lCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:21,628 [classy] First evaluation time: 4.91746 s
+ 2022-02-20 21:32:21,629 [classy] Average evaluation time: 4.91746 s
+ 2022-02-20 21:32:21,629 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:21,629 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:21,630 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -103.795
+ 2022-02-20 21:32:21,630 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00116326 s
+ 2022-02-20 21:32:21,630 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00116326 s
+ 2022-02-20 21:32:21,630 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8117603967896749, 's8h5': 0.9893633219513118, 's8omegamp5': 0.4562048665946374, 's8omegamp25': 0.6085466650341973, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 207.59050868279348}
+ 2022-02-20 21:32:21,631 [evaluate] log-posterior  = -100.421
+ 2022-02-20 21:32:21,631 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:21,631 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:21,631 [evaluate] log-likelihood = -103.795
+ 2022-02-20 21:32:21,632 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 207.591
+ 2022-02-20 21:32:21,632 [evaluate] Derived params:
+ 2022-02-20 21:32:21,632 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:21,632 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:21,632 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:21,632 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:21,632 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:21,632 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:21,632 [evaluate]    sigma8 = 0.81176
+ 2022-02-20 21:32:21,632 [evaluate]    s8h5 = 0.989363
+ 2022-02-20 21:32:21,632 [evaluate]    s8omegamp5 = 0.456205
+ 2022-02-20 21:32:21,632 [evaluate]    s8omegamp25 = 0.608547
+ 2022-02-20 21:32:21,632 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:21,632 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:21,632 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:21,632 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:21,632 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:21,632 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:21,632 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:21,632 [evaluate]    chi2__CMB = 207.591
+ 2022-02-20 21:32:21,642 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00116326 s  (1 evaluations)
+ 2022-02-20 21:32:21,643 [classy] Average evaluation time for classy: 4.91746 s  (1 evaluations)
+ 2022-02-20 21:32:22,851 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2400_linear'
+ 2022-02-20 21:32:23,030 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:23,032 [classy] Initialized!
+ 2022-02-20 21:32:23,033 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:23,294 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:23,295 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:23,295 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:23,295 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:23,295 [model]      Output: []
+ 2022-02-20 21:32:23,295 [model] - classy:
+ 2022-02-20 21:32:23,295 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:23,295 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:23,297 [model] Components will be computed in the order:
+ 2022-02-20 21:32:23,297 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:23,297 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:23,297 [model] - Cl: classy
+ 2022-02-20 21:32:23,315 [evaluate] Initialized!
+ 2022-02-20 21:32:23,331 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:23,332 [prior] Evaluating prior at array([3.05031922e+00, 9.64806781e-01, 6.94864741e+01, 2.25221272e-02,
+       1.20604935e-01, 5.04342172e-02, 1.00214108e+00])
+ 2022-02-20 21:32:23,333 [prior] Got logpriors = [3.0078057814962085]
+ 2022-02-20 21:32:23,333 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:23,333 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:23,333 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:23,333 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:23,333 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:23,334 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:23,334 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:23,334 [classy] Computing new state
+ 2022-02-20 21:32:23,334 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': None, 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'lCl tCl mPk', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:26,452 [classy] First evaluation time: 3.11767 s
+ 2022-02-20 21:32:26,452 [classy] Average evaluation time: 3.11767 s
+ 2022-02-20 21:32:26,452 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:26,452 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:26,453 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -104.43
+ 2022-02-20 21:32:26,453 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00125076 s
+ 2022-02-20 21:32:26,454 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00125076 s
+ 2022-02-20 21:32:26,454 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8116235154312484, 's8h5': 0.989196492679988, 's8omegamp5': 0.4561279400260253, 's8omegamp25': 0.6084440501560816, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 208.86038182211712}
+ 2022-02-20 21:32:26,455 [evaluate] log-posterior  = -101.056
+ 2022-02-20 21:32:26,455 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:26,455 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:26,455 [evaluate] log-likelihood = -104.43
+ 2022-02-20 21:32:26,455 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 208.86
+ 2022-02-20 21:32:26,455 [evaluate] Derived params:
+ 2022-02-20 21:32:26,455 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:26,455 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:26,455 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:26,455 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:26,455 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:26,455 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:26,455 [evaluate]    sigma8 = 0.811624
+ 2022-02-20 21:32:26,455 [evaluate]    s8h5 = 0.989196
+ 2022-02-20 21:32:26,455 [evaluate]    s8omegamp5 = 0.456128
+ 2022-02-20 21:32:26,455 [evaluate]    s8omegamp25 = 0.608444
+ 2022-02-20 21:32:26,456 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:26,456 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:26,456 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:26,456 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:26,456 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:26,456 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:26,456 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:26,456 [evaluate]    chi2__CMB = 208.86
+ 2022-02-20 21:32:26,466 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00125076 s  (1 evaluations)
+ 2022-02-20 21:32:26,466 [classy] Average evaluation time for classy: 3.11767 s  (1 evaluations)
+running lmax=2300
+ 2022-02-20 21:32:27,673 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2300_nonlinear'
+ 2022-02-20 21:32:27,850 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:27,852 [classy] Initialized!
+ 2022-02-20 21:32:27,853 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:28,251 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:28,251 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:28,251 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:28,252 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:28,252 [model]      Output: []
+ 2022-02-20 21:32:28,252 [model] - classy:
+ 2022-02-20 21:32:28,252 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:28,252 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:28,254 [model] Components will be computed in the order:
+ 2022-02-20 21:32:28,254 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:28,254 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:28,255 [model] - Cl: classy
+ 2022-02-20 21:32:28,281 [evaluate] Initialized!
+ 2022-02-20 21:32:28,300 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:28,300 [prior] Evaluating prior at array([3.04890152e+00, 9.64267765e-01, 6.58296703e+01, 2.23095053e-02,
+       1.20076661e-01, 6.16318147e-02, 1.00040400e+00])
+ 2022-02-20 21:32:28,301 [prior] Got logpriors = [3.361485488505884]
+ 2022-02-20 21:32:28,301 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:28,301 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:28,301 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:28,301 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:28,302 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:28,302 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:28,302 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:28,302 [classy] Computing new state
+ 2022-02-20 21:32:28,302 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': 'halofit', 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'lCl mPk tCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:33,261 [classy] First evaluation time: 4.95864 s
+ 2022-02-20 21:32:33,261 [classy] Average evaluation time: 4.95864 s
+ 2022-02-20 21:32:33,261 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:33,261 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:33,262 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -102.272
+ 2022-02-20 21:32:33,263 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00116519 s
+ 2022-02-20 21:32:33,263 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00116519 s
+ 2022-02-20 21:32:33,263 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8117603967896749, 's8h5': 0.9893633219513118, 's8omegamp5': 0.4562048665946374, 's8omegamp25': 0.6085466650341973, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 204.54348104154246}
+ 2022-02-20 21:32:33,264 [evaluate] log-posterior  = -98.8972
+ 2022-02-20 21:32:33,264 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:33,264 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:33,264 [evaluate] log-likelihood = -102.272
+ 2022-02-20 21:32:33,264 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 204.543
+ 2022-02-20 21:32:33,264 [evaluate] Derived params:
+ 2022-02-20 21:32:33,264 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:33,264 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:33,264 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:33,264 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:33,264 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:33,264 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:33,264 [evaluate]    sigma8 = 0.81176
+ 2022-02-20 21:32:33,265 [evaluate]    s8h5 = 0.989363
+ 2022-02-20 21:32:33,265 [evaluate]    s8omegamp5 = 0.456205
+ 2022-02-20 21:32:33,265 [evaluate]    s8omegamp25 = 0.608547
+ 2022-02-20 21:32:33,265 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:33,265 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:33,265 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:33,265 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:33,265 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:33,265 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:33,265 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:33,265 [evaluate]    chi2__CMB = 204.543
+ 2022-02-20 21:32:33,275 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00116519 s  (1 evaluations)
+ 2022-02-20 21:32:33,275 [classy] Average evaluation time for classy: 4.95864 s  (1 evaluations)
+ 2022-02-20 21:32:34,480 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2300_linear'
+ 2022-02-20 21:32:34,657 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:34,659 [classy] Initialized!
+ 2022-02-20 21:32:34,659 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:34,921 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:34,922 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:34,922 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:34,922 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:34,922 [model]      Output: []
+ 2022-02-20 21:32:34,922 [model] - classy:
+ 2022-02-20 21:32:34,922 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:34,922 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:34,923 [model] Components will be computed in the order:
+ 2022-02-20 21:32:34,923 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:34,924 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:34,924 [model] - Cl: classy
+ 2022-02-20 21:32:34,942 [evaluate] Initialized!
+ 2022-02-20 21:32:34,958 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:34,959 [prior] Evaluating prior at array([3.04930253e+00, 9.66781040e-01, 6.29052343e+01, 2.24221068e-02,
+       1.18480600e-01, 6.23102468e-02, 1.00130696e+00])
+ 2022-02-20 21:32:34,959 [prior] Got logpriors = [3.2378900573929563]
+ 2022-02-20 21:32:34,959 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:34,959 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:34,959 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:34,960 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:34,960 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:34,960 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:34,960 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:34,960 [classy] Computing new state
+ 2022-02-20 21:32:34,960 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': None, 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'mPk lCl tCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:38,090 [classy] First evaluation time: 3.12919 s
+ 2022-02-20 21:32:38,090 [classy] Average evaluation time: 3.12919 s
+ 2022-02-20 21:32:38,090 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:38,090 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:38,091 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -102.927
+ 2022-02-20 21:32:38,091 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00121042 s
+ 2022-02-20 21:32:38,092 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00121042 s
+ 2022-02-20 21:32:38,092 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8116235154312484, 's8h5': 0.989196492679988, 's8omegamp5': 0.4561279400260253, 's8omegamp25': 0.6084440501560816, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 205.85467930187096}
+ 2022-02-20 21:32:38,093 [evaluate] log-posterior  = -99.5528
+ 2022-02-20 21:32:38,093 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:38,093 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:38,093 [evaluate] log-likelihood = -102.927
+ 2022-02-20 21:32:38,093 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 205.855
+ 2022-02-20 21:32:38,093 [evaluate] Derived params:
+ 2022-02-20 21:32:38,093 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:38,093 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:38,093 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:38,093 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:38,093 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:38,093 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:38,093 [evaluate]    sigma8 = 0.811624
+ 2022-02-20 21:32:38,093 [evaluate]    s8h5 = 0.989196
+ 2022-02-20 21:32:38,093 [evaluate]    s8omegamp5 = 0.456128
+ 2022-02-20 21:32:38,093 [evaluate]    s8omegamp25 = 0.608444
+ 2022-02-20 21:32:38,094 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:38,094 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:38,094 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:38,094 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:38,094 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:38,094 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:38,094 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:38,094 [evaluate]    chi2__CMB = 205.855
+ 2022-02-20 21:32:38,104 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00121042 s  (1 evaluations)
+ 2022-02-20 21:32:38,104 [classy] Average evaluation time for classy: 3.12919 s  (1 evaluations)
+running lmax=2200
+ 2022-02-20 21:32:39,316 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2200_nonlinear'
+ 2022-02-20 21:32:39,494 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:39,496 [classy] Initialized!
+ 2022-02-20 21:32:39,497 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:39,894 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:39,894 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:39,894 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:39,895 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:39,895 [model]      Output: []
+ 2022-02-20 21:32:39,895 [model] - classy:
+ 2022-02-20 21:32:39,895 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:39,895 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:39,897 [model] Components will be computed in the order:
+ 2022-02-20 21:32:39,898 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:39,898 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:39,898 [model] - Cl: classy
+ 2022-02-20 21:32:39,930 [evaluate] Initialized!
+ 2022-02-20 21:32:39,953 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:39,954 [prior] Evaluating prior at array([3.04959431e+00, 9.62822181e-01, 6.79191592e+01, 2.22587513e-02,
+       1.21228817e-01, 5.95945936e-02, 1.00083405e+00])
+ 2022-02-20 21:32:39,954 [prior] Got logpriors = [3.3188909454762276]
+ 2022-02-20 21:32:39,954 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:39,955 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:39,955 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:39,955 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:39,955 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:39,955 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:39,956 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:39,956 [classy] Computing new state
+ 2022-02-20 21:32:39,956 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': 'halofit', 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'lCl mPk tCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:44,930 [classy] First evaluation time: 4.97393 s
+ 2022-02-20 21:32:44,930 [classy] Average evaluation time: 4.97393 s
+ 2022-02-20 21:32:44,930 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:44,930 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:44,931 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -102.108
+ 2022-02-20 21:32:44,932 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00116747 s
+ 2022-02-20 21:32:44,932 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00116747 s
+ 2022-02-20 21:32:44,932 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8117603967896749, 's8h5': 0.9893633219513118, 's8omegamp5': 0.4562048665946374, 's8omegamp25': 0.6085466650341973, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 204.21561867990798}
+ 2022-02-20 21:32:44,933 [evaluate] log-posterior  = -98.7333
+ 2022-02-20 21:32:44,933 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:44,933 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:44,933 [evaluate] log-likelihood = -102.108
+ 2022-02-20 21:32:44,933 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 204.216
+ 2022-02-20 21:32:44,933 [evaluate] Derived params:
+ 2022-02-20 21:32:44,933 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:44,933 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:44,933 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:44,933 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:44,933 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:44,933 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:44,933 [evaluate]    sigma8 = 0.81176
+ 2022-02-20 21:32:44,933 [evaluate]    s8h5 = 0.989363
+ 2022-02-20 21:32:44,933 [evaluate]    s8omegamp5 = 0.456205
+ 2022-02-20 21:32:44,933 [evaluate]    s8omegamp25 = 0.608547
+ 2022-02-20 21:32:44,934 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:44,934 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:44,934 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:44,934 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:44,934 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:44,934 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:44,934 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:44,934 [evaluate]    chi2__CMB = 204.216
+ 2022-02-20 21:32:44,944 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00116747 s  (1 evaluations)
+ 2022-02-20 21:32:44,945 [classy] Average evaluation time for classy: 4.97393 s  (1 evaluations)
+ 2022-02-20 21:32:46,130 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '2200_linear'
+ 2022-02-20 21:32:46,308 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:46,310 [classy] Initialized!
+ 2022-02-20 21:32:46,310 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:46,573 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:46,573 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:46,573 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:46,573 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:46,573 [model]      Output: []
+ 2022-02-20 21:32:46,573 [model] - classy:
+ 2022-02-20 21:32:46,574 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:46,574 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:46,575 [model] Components will be computed in the order:
+ 2022-02-20 21:32:46,575 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:46,575 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:46,575 [model] - Cl: classy
+ 2022-02-20 21:32:46,594 [evaluate] Initialized!
+ 2022-02-20 21:32:46,610 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:46,611 [prior] Evaluating prior at array([3.04942785e+00, 9.67182389e-01, 6.95957828e+01, 2.24244538e-02,
+       1.19155242e-01, 7.04660125e-02, 9.98523650e-01])
+ 2022-02-20 21:32:46,611 [prior] Got logpriors = [3.200174024131333]
+ 2022-02-20 21:32:46,611 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:46,612 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:46,612 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:46,612 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:46,612 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:46,612 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:46,612 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:46,612 [classy] Computing new state
+ 2022-02-20 21:32:46,612 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': None, 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'mPk tCl lCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:49,737 [classy] First evaluation time: 3.124 s
+ 2022-02-20 21:32:49,737 [classy] Average evaluation time: 3.124 s
+ 2022-02-20 21:32:49,737 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:49,737 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:49,738 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -102.767
+ 2022-02-20 21:32:49,739 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00122996 s
+ 2022-02-20 21:32:49,739 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00122996 s
+ 2022-02-20 21:32:49,739 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8116235154312484, 's8h5': 0.989196492679988, 's8omegamp5': 0.4561279400260253, 's8omegamp25': 0.6084440501560816, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 205.53414970589893}
+ 2022-02-20 21:32:49,740 [evaluate] log-posterior  = -99.3925
+ 2022-02-20 21:32:49,740 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:49,740 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:49,740 [evaluate] log-likelihood = -102.767
+ 2022-02-20 21:32:49,740 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 205.534
+ 2022-02-20 21:32:49,740 [evaluate] Derived params:
+ 2022-02-20 21:32:49,740 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:49,740 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:49,740 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:49,740 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:49,740 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:49,740 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:49,740 [evaluate]    sigma8 = 0.811624
+ 2022-02-20 21:32:49,741 [evaluate]    s8h5 = 0.989196
+ 2022-02-20 21:32:49,741 [evaluate]    s8omegamp5 = 0.456128
+ 2022-02-20 21:32:49,741 [evaluate]    s8omegamp25 = 0.608444
+ 2022-02-20 21:32:49,741 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:49,741 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:49,741 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:49,741 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:49,741 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:49,741 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:49,741 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:49,741 [evaluate]    chi2__CMB = 205.534
+ 2022-02-20 21:32:49,752 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00122996 s  (1 evaluations)
+ 2022-02-20 21:32:49,752 [classy] Average evaluation time for classy: 3.124 s  (1 evaluations)
+running lmax=1800
+ 2022-02-20 21:32:50,944 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '1800_nonlinear'
+ 2022-02-20 21:32:51,122 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:51,124 [classy] Initialized!
+ 2022-02-20 21:32:51,125 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:51,614 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:51,615 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:51,615 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:51,615 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:51,615 [model]      Output: []
+ 2022-02-20 21:32:51,615 [model] - classy:
+ 2022-02-20 21:32:51,615 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:51,615 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:51,618 [model] Components will be computed in the order:
+ 2022-02-20 21:32:51,618 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:51,618 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:51,618 [model] - Cl: classy
+ 2022-02-20 21:32:51,649 [evaluate] Initialized!
+ 2022-02-20 21:32:51,672 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:51,673 [prior] Evaluating prior at array([3.04988282e+00, 9.57140545e-01, 6.98138269e+01, 2.25896873e-02,
+       1.20345382e-01, 5.62862803e-02, 9.97193890e-01])
+ 2022-02-20 21:32:51,674 [prior] Got logpriors = [2.7446023560181354]
+ 2022-02-20 21:32:51,674 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:51,674 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:51,674 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:51,674 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:51,675 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:51,675 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:51,675 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:51,675 [classy] Computing new state
+ 2022-02-20 21:32:51,675 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': 'halofit', 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'mPk tCl lCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:32:56,570 [classy] First evaluation time: 4.89527 s
+ 2022-02-20 21:32:56,571 [classy] Average evaluation time: 4.89527 s
+ 2022-02-20 21:32:56,571 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:32:56,571 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:32:56,572 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -92.1709
+ 2022-02-20 21:32:56,572 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00113485 s
+ 2022-02-20 21:32:56,572 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00113485 s
+ 2022-02-20 21:32:56,572 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8117603967896749, 's8h5': 0.9893633219513118, 's8omegamp5': 0.4562048665946374, 's8omegamp25': 0.6085466650341973, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 184.34175595442176}
+ 2022-02-20 21:32:56,573 [evaluate] log-posterior  = -88.7963
+ 2022-02-20 21:32:56,573 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:32:56,573 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:32:56,573 [evaluate] log-likelihood = -92.1709
+ 2022-02-20 21:32:56,574 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 184.342
+ 2022-02-20 21:32:56,574 [evaluate] Derived params:
+ 2022-02-20 21:32:56,574 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:32:56,574 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:32:56,574 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:32:56,574 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:32:56,574 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:32:56,574 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:32:56,574 [evaluate]    sigma8 = 0.81176
+ 2022-02-20 21:32:56,574 [evaluate]    s8h5 = 0.989363
+ 2022-02-20 21:32:56,574 [evaluate]    s8omegamp5 = 0.456205
+ 2022-02-20 21:32:56,574 [evaluate]    s8omegamp25 = 0.608547
+ 2022-02-20 21:32:56,574 [evaluate]    A = 2.10058
+ 2022-02-20 21:32:56,574 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:32:56,574 [evaluate]    age = 13.7974
+ 2022-02-20 21:32:56,574 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:32:56,574 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:32:56,574 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:32:56,574 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:32:56,574 [evaluate]    chi2__CMB = 184.342
+ 2022-02-20 21:32:56,584 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00113485 s  (1 evaluations)
+ 2022-02-20 21:32:56,584 [classy] Average evaluation time for classy: 4.89527 s  (1 evaluations)
+ 2022-02-20 21:32:57,790 [output_mpi] Output to be read-from/written-into folder '/gpfs/home/kuzhong/work/cocoa1/Cocoa/projects/nonlinear/result', with prefix '1800_linear'
+ 2022-02-20 21:32:57,968 [classy] Importing *local* CLASS from '/gpfs/home/kuzhong/work/cocoa1/Cocoa/external_modules/code/class_public'.
+ 2022-02-20 21:32:57,970 [classy] Initialized!
+ 2022-02-20 21:32:57,971 [clik] Importing *auto-installed* clik (but defaulting to *global*).
+ Initializing Planck likelihood, version Plik_v22_cmbonly_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+----
+
+  plik_cmbonly
+----
+ 2022-02-20 21:32:58,231 [planck_2018_highl_plik.tt_lite] Initialized!
+ 2022-02-20 21:32:58,232 [model] Parameters were assigned as follows:
+ 2022-02-20 21:32:58,232 [model] - planck_2018_highl_plik.TT_lite:
+ 2022-02-20 21:32:58,232 [model]      Input:  ['A_planck']
+ 2022-02-20 21:32:58,232 [model]      Output: []
+ 2022-02-20 21:32:58,232 [model] - classy:
+ 2022-02-20 21:32:58,232 [model]      Input:  ['As', 'ns', 'H0', 'omegabh2', 'omegach2', 'm_ncdm', 'tau']
+ 2022-02-20 21:32:58,232 [model]      Output: ['omegal', 'omegam', 'sigma8', 'age', 'rdrag', 'yheused', 'omegan']
+ 2022-02-20 21:32:58,233 [model] Components will be computed in the order:
+ 2022-02-20 21:32:58,233 [model]  - [classy, planck_2018_highl_plik.TT_lite]
+ 2022-02-20 21:32:58,234 [model] Requirements will be calculated by these components:
+ 2022-02-20 21:32:58,234 [model] - Cl: classy
+ 2022-02-20 21:32:58,252 [evaluate] Initialized!
+ 2022-02-20 21:32:58,268 [evaluate] Looking for a reference point with non-zero prior.
+ 2022-02-20 21:32:58,268 [prior] Evaluating prior at array([3.05028684e+00, 9.64574664e-01, 6.93974768e+01, 2.25518137e-02,
+       1.20579648e-01, 5.21866020e-02, 9.99731384e-01])
+ 2022-02-20 21:32:58,269 [prior] Got logpriors = [3.3687702763431506]
+ 2022-02-20 21:32:58,269 [evaluate] Reference point:
+   logA = 3.0448
+   ns = 0.96605
+   H0 = 67.32
+   omegabh2 = 0.022383
+   omegach2 = 0.12011
+   tau = 0.0543
+   A_planck = 1
+ 2022-02-20 21:32:58,269 [evaluate] Evaluating prior and likelihoods...
+ 2022-02-20 21:32:58,269 [model] Posterior to be computed for parameters {'logA': 3.0448, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:58,269 [prior] Evaluating prior at array([3.0448e+00, 9.6605e-01, 6.7320e+01, 2.2383e-02, 1.2011e-01,
+       5.4300e-02, 1.0000e+00])
+ 2022-02-20 21:32:58,270 [prior] Got logpriors = [3.3745426564305694]
+ 2022-02-20 21:32:58,270 [model] Got input parameters: {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543, 'A_planck': 1.0}
+ 2022-02-20 21:32:58,270 [classy] Got parameters {'As': 2.1005829616811546e-09, 'ns': 0.96605, 'H0': 67.32, 'omegabh2': 0.022383, 'omegach2': 0.12011, 'm_ncdm': 0.06, 'tau': 0.0543}
+ 2022-02-20 21:32:58,270 [classy] Computing new state
+ 2022-02-20 21:32:58,270 [classy] Setting parameters: {'A_s': 2.1005829616811546e-09, 'n_s': 0.96605, 'H0': 67.32, 'omega_b': 0.022383, 'omega_cdm': 0.12011, 'm_ncdm': 0.06, 'tau_reio': 0.0543, 'non linear': None, 'N_ncdm': 1, 'N_ur': 2.0328, 'output': 'tCl mPk lCl', 'lensing': 'yes', 'l_max_scalars': 2508, 'P_k_max_1/Mpc': 1}
+ 2022-02-20 21:33:01,389 [classy] First evaluation time: 3.11886 s
+ 2022-02-20 21:33:01,389 [classy] Average evaluation time: 3.11886 s
+ 2022-02-20 21:33:01,390 [planck_2018_highl_plik.tt_lite] Got parameters {'A_planck': 1.0}
+ 2022-02-20 21:33:01,390 [planck_2018_highl_plik.tt_lite] Computing new state
+ 2022-02-20 21:33:01,391 [planck_2018_highl_plik.tt_lite] Computed log-likelihood = -92.7312
+ 2022-02-20 21:33:01,391 [planck_2018_highl_plik.tt_lite] First evaluation time: 0.00120603 s
+ 2022-02-20 21:33:01,391 [planck_2018_highl_plik.tt_lite] Average evaluation time: 0.00120603 s
+ 2022-02-20 21:33:01,391 [model] Computed derived parameters: {'As': 2.1005829616811546e-09, 'omegal': 0.6840822946880976, 'omegam': 0.315837801803785, 'omegamh2': 0.14313713590294416, 'omegab': 0.049388982622703935, 'omegac': 0.26502750760903226, 'sigma8': 0.8116235154312484, 's8h5': 0.989196492679988, 's8omegamp5': 0.4561279400260253, 's8omegamp25': 0.6084440501560816, 'A': 2.1005829616811544, 'clamp': 1.884410249585134, 'age': 13.797391648732246, 'rdrag': 147.0525689567611, 'yheused': 0.24540052650472885, 'omegan': 0.001421456072661248, 'omegan2': 0.0006442013903673895, 'chi2__CMB': 185.4623430653426}
+ 2022-02-20 21:33:01,392 [evaluate] log-posterior  = -89.3566
+ 2022-02-20 21:33:01,392 [evaluate] log-prior      = 3.37454
+ 2022-02-20 21:33:01,392 [evaluate]    logprior_0 = 3.37454
+ 2022-02-20 21:33:01,392 [evaluate] log-likelihood = -92.7312
+ 2022-02-20 21:33:01,392 [evaluate]    chi2_planck_2018_highl_plik.TT_lite = 185.462
+ 2022-02-20 21:33:01,393 [evaluate] Derived params:
+ 2022-02-20 21:33:01,393 [evaluate]    As = 2.10058e-09
+ 2022-02-20 21:33:01,393 [evaluate]    omegal = 0.684082
+ 2022-02-20 21:33:01,393 [evaluate]    omegam = 0.315838
+ 2022-02-20 21:33:01,393 [evaluate]    omegamh2 = 0.143137
+ 2022-02-20 21:33:01,393 [evaluate]    omegab = 0.049389
+ 2022-02-20 21:33:01,393 [evaluate]    omegac = 0.265028
+ 2022-02-20 21:33:01,393 [evaluate]    sigma8 = 0.811624
+ 2022-02-20 21:33:01,393 [evaluate]    s8h5 = 0.989196
+ 2022-02-20 21:33:01,393 [evaluate]    s8omegamp5 = 0.456128
+ 2022-02-20 21:33:01,393 [evaluate]    s8omegamp25 = 0.608444
+ 2022-02-20 21:33:01,393 [evaluate]    A = 2.10058
+ 2022-02-20 21:33:01,393 [evaluate]    clamp = 1.88441
+ 2022-02-20 21:33:01,393 [evaluate]    age = 13.7974
+ 2022-02-20 21:33:01,393 [evaluate]    rdrag = 147.053
+ 2022-02-20 21:33:01,393 [evaluate]    yheused = 0.245401
+ 2022-02-20 21:33:01,393 [evaluate]    omegan = 0.00142146
+ 2022-02-20 21:33:01,393 [evaluate]    omegan2 = 0.000644201
+ 2022-02-20 21:33:01,393 [evaluate]    chi2__CMB = 185.462
+ 2022-02-20 21:33:01,404 [planck_2018_highl_plik.tt_lite] Average evaluation time for planck_2018_highl_plik.TT_lite: 0.00120603 s  (1 evaluations)
+ 2022-02-20 21:33:01,404 [classy] Average evaluation time for classy: 3.11886 s  (1 evaluations)
