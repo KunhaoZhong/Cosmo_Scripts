@@ -6,6 +6,7 @@ For example, the CMB anisotropies at large scale seem to be lower than expected 
 
 For example, we get the following Cl_band from the posterior of a model with dark energy anisotropic stress.
 
+![](https://github.com/KunhaoZhong/Cosmo_scripts/blob/main/get_band/cl_astress.png)<!-- .element height="9%" width="10%" -->
 
 The script utilize MPI python wrapper mpi4py, so the execution is fast. A sample slurm script is also provided.
 
