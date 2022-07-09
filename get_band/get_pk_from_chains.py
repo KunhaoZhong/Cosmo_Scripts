@@ -14,15 +14,17 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 
-Cl_range = np.arange(3, 151) # range of Cls
+len_Pk_range = 100 # How much points in the output
+log10_Pk_range     = np.linspace(-2.0, -1.0, len_Pk_range) #range of Pk in log10 base
+Pk_range           = np.flip(np.power(10.0, log10_Pk_range)) #real k values (not k/h in usual plots)
 
-def get_cl(cosmo_params, param_names):
+def get_Pk(cosmo_params, param_names):
 
-    params_and_Cls = np.zeros((len(cosmo_params), len(cosmo_params[0])+len(Cl_range)), dtype=np.float64)
+    params_and_Pks = np.zeros((len(cosmo_params), len(cosmo_params[0])+len(Pk_range)), dtype=np.float64)
 
 
     for i in range(len(cosmo_params)):
-        Cls = np.zeros(len(Cl_range), np.float64)
+        Pks = np.zeros(len(Pk_range), np.float64)
         index_theta_MC_100    = int(np.where(param_names=='theta_MC_100')[0]) - 1 # minus one for the #sign header
         index_omegabh2        = int(np.where(param_names=='omegabh2')[0]) - 1 
         index_omegach2        = int(np.where(param_names=='omegach2')[0]) - 1 
@@ -42,19 +44,30 @@ def get_cl(cosmo_params, param_names):
         pars.Accuracy.lSampleBoost = 50
         
         results = camb.get_results(pars) 
-        totCL   = results.get_cmb_power_spectra(pars, CMB_unit='muK')['total']
-        Cl_TT   = totCL[:,0]
-        Cls     = Cl_TT[Cl_range[0]-1 : Cl_range[-1]]
 
-        params_and_Cls[i] =  np.append(cosmo_params[i], Cls)
+        pars.set_matter_power(redshifts=[0., 0.8], kmax=2.0)
+
+        pars.NonLinear = model.NonLinear_both
+        #Call the Pk interpolator function in camb. It can also calculate power sepctrum of weyl
+        Pk_function = camb.get_matter_power_interpolator(pars, nonlinear=True, 
+                                                hubble_units=False, k_hunit=False, kmax=1.0,
+                                                var1=model.Transfer_tot,var2=model.Transfer_tot, zmax=0.2)
+
+        Pks = np.zeros(len_Pk_range)
+
+        for j, kk in enumerate(Pk_range):
+            Pks[j] = Pk_function.P(0.0,kk) # first number is redshift 
+
+        params_and_Pks[i] =  np.append(cosmo_params[i], Pks)
+
 
         #for monitoring progress of code running
         if i%100 == 0:
             print('rank', rank, "in progress: ", i)
-        if i == len(cosmo_params):
+        if i == len(cosmo_params)-1:
             print('rank', rank, "in progress: ", i)
     
-    return params_and_Cls
+    return params_and_Pks
 
 
 
@@ -104,39 +117,28 @@ comm.Bcast(displ, root=0)
 my_params = params[displ[rank]: displ[rank]+count[rank]]
 
 
-my_result_Cl = np.zeros((len(my_params), len(my_params[0])+len(Cl_range)), dtype=np.float64)
+my_result_Pk = np.zeros((len(my_params), len(my_params[0])+len(Pk_range)), dtype=np.float64)
 
-result_Cl    = np.zeros((len(params),    len(params[0])+len(Cl_range)), dtype=np.float64)
+result_Pk    = np.zeros((len(params),    len(params[0])+len(Pk_range)), dtype=np.float64)
 
-my_result_Cl = get_cl(my_params, param_names)
-
-#result_Cl[displ[rank]: displ[rank]+count[rank]] = my_result_Cl
+my_result_Pk = get_Pk(my_params, param_names)
 
 comm.Barrier()
 
-#Write the header
-# if rank==0:
-#     header = '              '.join(param_names_str)
-#     with open('./projects/AStress/Cl_band/out_Cl.txt', 'w') as outfile:
-#         outfile.write(header)
-#         for ll in Cl_range:
-#             outfile.write("             Cl_" + str(ll))
-
-
 if rank == 0:
     header = '              '.join(param_names_str)
-    for i in Cl_range:
-        header =  header + '          Cl_' + str(i)
-    with open('./projects/AStress/Cl_band/out_Cl.txt', 'w') as outfile:
+    for i, kk in enumerate(Pk_range):
+        header =  header + '          Pk_' + str(i) #Note: the name of Pk_() is not the real k value(to avoid super long headers)
+    with open('./projects/AStress/Cl_band/out_Pk.txt', 'w') as outfile:
         outfile.write(header)
 
 comm.Barrier()
 
 #Write the output, due to parallezation, the order is not the same as the origional chain file.
 
-with open('./projects/AStress/Cl_band/out_Cl.txt', 'ab') as outfile:
+with open('./projects/AStress/Cl_band/out_Pk.txt', 'ab') as outfile:
     outfile.write(b"\n")
-    np.savetxt(outfile, my_result_Cl, delimiter='          ')
+    np.savetxt(outfile, my_result_Pk, delimiter='          ')
 
 
 
