@@ -1,0 +1,6 @@
+ndim int 1
+component_type str ksz
+ndef int 2
+component_name str ksz
+lmin int 35
+lmax int 396

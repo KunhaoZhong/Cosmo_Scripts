@@ -1,0 +1,7 @@
+ndim int 7
+component_type str powerlaw_free_emissivity_XX
+nrename int 10
+ndef int 6
+component_name str dust_TE
+lmin int 35
+lmax int 396
